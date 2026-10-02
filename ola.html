@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<style>
+  @page { size: A4; margin: 18mm 16mm; }
+  * { box-sizing: border-box; }
+  body { font-family: 'DejaVu Sans', sans-serif; color:#222; font-size:10.5pt; line-height:1.45; margin:0; }
+
+  /* ---------- PORTADA ---------- */
+  .portada { page-break-after: always; text-align:center; padding-top:60px; }
+  .portada .icono { font-size:80px; }
+  .portada h1 { font-size:26pt; color:#B71C1C; margin:24px 30px 8px; line-height:1.2; }
+  .portada h2 { font-size:14pt; color:#555; font-weight:normal; margin:0 40px 30px; }
+  .portada .familia { font-size:64px; margin:20px 0; }
+  .portada .datos { margin-top:70px; font-size:12pt; color:#333; }
+  .portada .datos p { margin:4px 0; }
+
+  /* ---------- ÍNDICE ---------- */
+  .indice { page-break-after: always; }
+  h1.titulo { color:#B71C1C; border-bottom:3px solid #B71C1C; padding-bottom:6px; font-size:18pt; }
+  .indice ol { font-size:12pt; line-height:2.1; }
+  .indice li { border-bottom:1px dotted #bbb; }
+  .indice .pag { float:right; color:#B71C1C; font-weight:bold; }
+
+  /* ---------- SECCIONES ---------- */
+  .seccion { page-break-after: always; }
+  .seccion:last-child { page-break-after: avoid; }
+  .encabezado { color:#fff; padding:12px 16px; border-radius:8px; display:flex; align-items:center; gap:12px; }
+  .encabezado .num { font-size:26pt; font-weight:bold; opacity:.9; }
+  .encabezado .ico { font-size:26pt; }
+  .encabezado h2 { margin:0; font-size:16pt; }
+  .amarillo { background:#F9A825; } .rojo { background:#C62828; }
+  .azul { background:#1565C0; } .naranja { background:#EF6C00; }
+  .verde { background:#2E7D32; } .morado { background:#6A1B9A; }
+  .gris { background:#455A64; }
+
+  .bloque { border:1px solid #ddd; border-left:6px solid #999; border-radius:6px;
+            padding:8px 14px; margin:12px 0; page-break-inside:avoid; }
+  .bloque h3 { margin:0 0 4px; font-size:11pt; text-transform:uppercase; letter-spacing:.5px; }
+  .antes { border-left-color:#546E7A; } .antes h3 { color:#37474F; }
+  .durante { border-left-color:#B71C1C; } .durante h3 { color:#B71C1C; }
+  .despues { border-left-color:#2E7D32; } .despues h3 { color:#2E7D32; }
+  .reco { border-left-color:#F9A825; background:#FFF8E1; } .reco h3 { color:#B8860B; }
+
+  ul { margin:4px 0 4px 18px; padding:0; }
+  li { margin:2px 0; }
+  .emoji { font-size:13pt; }
+
+  table { border-collapse:collapse; width:100%; margin:12px 0; font-size:9.5pt; }
+  th { background:#2E7D32; color:#fff; padding:7px 8px; text-align:left; }
+  td { border:1px solid #ccc; padding:6px 8px; vertical-align:top; }
+  tr:nth-child(even) td { background:#F1F8E9; }
+
+  .contactos { display:flex; gap:10px; flex-wrap:wrap; margin:14px 0; }
+  .tarjeta { flex:1 1 45%; border:2px solid #C62828; border-radius:10px; padding:12px; text-align:center; }
+  .tarjeta .numero { font-size:22pt; font-weight:bold; color:#C62828; }
+  .tarjeta .nombre { font-size:10pt; color:#555; }
+
+  .nota { background:#E3F2FD; border:1px solid #90CAF9; border-radius:6px;
+          padding:8px 12px; margin:10px 0; font-size:10pt; }
+  .peligro { background:#FFEBEE; border:1px solid #EF9A9A; border-radius:6px;
+             padding:8px 12px; margin:10px 0; font-size:10pt; }
+</style>
+<base target="_blank">
+</head>
+<body>
+
+<!-- 1. PORTADA -->
+<div class="portada">
+  <div class="icono">🌋⛑️</div>
+  <h1>Sobrevive ante un Sismo, Huayco o Incendio</h1>
+  <h2>Guía práctica de prevención para ti y tu familia</h2>
+  <div class="familia">👨‍👩‍👧‍👦🎒🐶</div>
+  <div class="datos">
+    <p><b>Curso:</b> DPCC — Desarrollo Personal, Ciudadanía y Cívica</p>
+    <p><b>Nombre:</b> ______________________________</p>
+    <p><b>Año:</b> 2026</p>
+  </div>
+</div>
+
+<!-- 2. ÍNDICE -->
+<div class="indice">
+  <h1 class="titulo">📑 Índice</h1>
+  <ol>
+    <li>Mochila de Emergencia <span class="pag">3</span></li>
+    <li>Kits Extra o Personales <span class="pag">4</span></li>
+    <li>Qué hacer ante un Sismo (temblor leve) 🟡 <span class="pag">5</span></li>
+    <li>Qué hacer ante un Terremoto 🔴 <span class="pag">6</span></li>
+    <li>Prevención ante un Huayco 🔵 <span class="pag">7</span></li>
+    <li>Qué hacer ante un Incendio 🟠 <span class="pag">8</span></li>
+    <li>Cómo racionar alimentos si quedas sepultado (6 días) <span class="pag">9</span></li>
+    <li>Cierre / Contactos de emergencia <span class="pag">10</span></li>
+  </ol>
+  <div class="nota">💡 <b>Consejo general:</b> la preparación salva vidas. Dedica un domingo al año a revisar esta guía con toda tu familia.</div>
+</div>
+
+<!-- 3. MOCHILA DE EMERGENCIA -->
+<div class="seccion">
+  <div class="encabezado verde"><span class="num">3</span><span class="ico">🎒</span><h2>Mochila de Emergencia</h2></div>
+  <div class="nota">⏰ <b>Antes:</b> prepararla hoy y <b>revisarla cada 6 meses</b> (enero y julio). Revisa fechas de vencimiento de alimentos y pilas.</div>
+  <h3>Contenido esencial</h3>
+  <ul>
+    <li><span class="emoji">💧</span> <b>Agua:</b> 2 litros por persona por día (mínimo 3 días)</li>
+    <li><span class="emoji">🥫</span> <b>Alimentos no perecibles:</b> enlatados, barras energéticas, frutos secos</li>
+    <li><span class="emoji">⛑️</span> <b>Botiquín de primeros auxilios</b> (curitas, gasas, alcohol, analgésicos)</li>
+    <li><span class="emoji">🔦</span> <b>Linterna</b> y pilas extra</li>
+    <li><span class="emoji">📻</span> <b>Radio a pilas</b> (para escuchar noticias si falla la electricidad)</li>
+    <li><span class="emoji">📄</span> <b>Documentos importantes</b> en bolsa impermeable (DNI, seguros, certificados)</li>
+    <li><span class="emoji">📣</span> <b>Silbato</b> (para pedir ayuda sin gastar la voz)</li>
+    <li><span class="emoji">🧣</span> <b>Manta térmica</b> (ligera y abrigadora)</li>
+    <li><span class="emoji">💵</span> <b>Dinero en efectivo</b> (monedas y billetes pequeños)</li>
+    <li><span class="emoji">🔑</span> <b>Copia de llaves</b> de casa y del auto</li>
+  </ul>
+  <div class="bloque reco"><h3>⚠️ Recomendaciones</h3>
+    <ul>
+      <li>Mantén la mochila <b>lista junto a la puerta</b> o en un lugar accesible.</li>
+      <li>Peso máximo recomendado: <b>~10 kg</b> (que pueda cargarla cualquier adulto).</li>
+      <li>Adapta el contenido al clima de tu zona (abrigo, ropa de lluvia, protector solar).</li>
+    </ul>
+  </div>
+</div>
+
+<!-- 4. KITS EXTRA -->
+<div class="seccion">
+  <div class="encabezado morado"><span class="num">4</span><span class="ico">👜</span><h2>Kits Extra o Personales</h2></div>
+  <div class="bloque antes"><h3>🐾 Mascotas</h3>
+    <ul><li>Alimento y agua (3 días) · Correa o transportadora · Botiquín veterinario · Identificación con placa o microchip · Manta</li></ul>
+  </div>
+  <div class="bloque antes"><h3>👶 Bebés y niños</h3>
+    <ul><li>Pañales y toallitas húmedas · Leche o fórmula · Ropa de cambio · Juguete o manta de apego (calma al niño)</li></ul>
+  </div>
+  <div class="bloque antes"><h3>🧓 Adultos mayores</h3>
+    <ul><li>Medicamentos (mínimo 1 semana) · Lentes o audífonos · Documentos médicos (carnet, recetas, alergias)</li></ul>
+  </div>
+  <div class="bloque reco"><h3>⚠️ Recomendaciones</h3>
+    <ul>
+      <li>Prepara <b>una bolsa pequeña por integrante</b>, incluidas mascotas.</li>
+      <li><b>Etiqueta cada bolsa</b> con nombre, edad y necesidades especiales.</li>
+      <li>Guarda los kits junto a la mochila principal, en la puerta.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- 5. SISMO 🟡 -->
+<div class="seccion">
+  <div class="encabezado amarillo"><span class="num">5</span><span class="ico">🟡</span><h2>Qué hacer ante un Sismo (temblor leve)</h2></div>
+  <div class="bloque antes"><h3>🟡 Antes</h3>
+    <ul>
+      <li>Identifica las <b>zonas seguras</b> de cada habitación (marcos de puertas, columnas, bajo mesas resistentes).</li>
+      <li><b>Asegura muebles</b>, estanterías y objetos pesados a la pared; no coloques cosas sobre la cama.</li>
+    </ul>
+  </div>
+  <div class="bloque durante"><h3>🟡 Durante — Método ABC</h3>
+    <ul>
+      <li><b>A</b> — Mantén la calma y <b>Agáchate</b>.</li>
+      <li><b>B</b> — <b>Cúbrete</b> bajo una mesa resistente o protege tu cabeza con las manos.</li>
+      <li><b>C</b> — <b>Sujétate</b> firmemente a la mesa hasta que deje de temblar.</li>
+    </ul>
+  </div>
+  <div class="bloque despues"><h3>🟡 Después</h3>
+    <ul>
+      <li>Revisa si hay daños en tu vivienda y en servicios (gas, electricidad, agua).</li>
+      <li><b>Corta el gas y la luz</b> si percibes fugas u olores.</li>
+    </ul>
+  </div>
+  <div class="bloque reco"><h3>⚠️ Recomendaciones</h3>
+    <ul><li><b>No corras</b> ni empujes a otros. <b>No uses ascensores</b> durante ni después del sismo.</li></ul>
+  </div>
+</div>
+
+<!-- 6. TERREMOTO 🔴 -->
+<div class="seccion">
+  <div class="encabezado rojo"><span class="num">6</span><span class="ico">🔴</span><h2>Qué hacer ante un Terremoto</h2></div>
+  <div class="bloque antes"><h3>🔴 Antes</h3>
+    <ul>
+      <li>Elabora un <b>plan familiar de evacuación</b> y pruébalo dos veces al año.</li>
+      <li>Define <b>dos puntos de encuentro</b>: uno cerca de casa y otro fuera del barrio.</li>
+    </ul>
+  </div>
+  <div class="bloque durante"><h3>🔴 Durante</h3>
+    <ul>
+      <li><b>Protege tu cabeza y cuello</b> con los brazos o un cojín.</li>
+      <li>Alejate de <b>ventanas, espejos y objetos de vidrio</b> que pueden estallar.</li>
+      <li><b>No salgas corriendo</b> durante el temblor: lo más peligroso está afuera (fachadas, cables, cornisas).</li>
+    </ul>
+  </div>
+  <div class="bloque despues"><h3>🔴 Después</h3>
+    <ul>
+      <li>Evacúa <b>con calma</b> por las escaleras; revisa heridos y brinda primeros auxilios.</li>
+      <li><b>No enciendas fósforos ni interruptores</b>: puede haber fugas de gas.</li>
+    </ul>
+  </div>
+  <div class="bloque reco"><h3>⚠️ Recomendaciones</h3>
+    <ul><li>Duerme con <b>linterna, silbato y zapatos bajo la cama</b> para actuar de inmediato, incluso de noche.</li></ul>
+  </div>
+</div>
+
+<!-- 7. HUAYCO 🔵 -->
+<div class="seccion">
+  <div class="encabezado azul"><span class="num">7</span><span class="ico">🔵</span><h2>Prevención ante un Huayco</h2></div>
+  <div class="bloque antes"><h3>🔵 Antes</h3>
+    <ul>
+      <li>Conoce las <b>rutas de evacuación</b> de tu zona y practícalas en familia.</li>
+      <li><b>No construyas cerca de quebradas</b>, cauces ni faldas de cerros inestables.</li>
+    </ul>
+  </div>
+  <div class="bloque durante"><h3>🔵 Durante</h3>
+    <ul>
+      <li>Dirígete <b>a zonas altas</b> lo antes posible.</li>
+      <li>Alejate de <b>ríos, quebradas y laderas</b>; un huayco baja muy rápido y arrastra rocas y árboles.</li>
+    </ul>
+  </div>
+  <div class="bloque despues"><h3>🔵 Después</h3>
+    <ul>
+      <li><b>No regreses</b> a la zona afectada hasta que las autoridades confirmen que es seguro.</li>
+      <li><b>Reporta daños</b> a la defensa civil o la municipalidad.</li>
+    </ul>
+  </div>
+  <div class="bloque reco"><h3>⚠️ Recomendaciones</h3>
+    <ul><li>Identifica los <b>albergues cercanos</b> y ten <b>radio y linterna</b> a la mano: la electricidad suele fallar primero.</li></ul>
+  </div>
+</div>
+
+<!-- 8. INCENDIO 🟠 -->
+<div class="seccion">
+  <div class="encabezado naranja"><span class="num">8</span><span class="ico">🟠</span><h2>Qué hacer ante un Incendio</h2></div>
+  <div class="bloque antes"><h3>🟠 Antes</h3>
+    <ul>
+      <li>Revisa periódicamente las <b>instalaciones eléctricas</b> y no sobrecargues los enchufes.</li>
+      <li>Ten un <b>extintor</b> en casa y que toda la familia sepa usarlo (técnica P.A.S.: jala, apunta, presiona).</li>
+    </ul>
+  </div>
+  <div class="bloque durante"><h3>🟠 Durante</h3>
+    <ul>
+      <li><b>Sal agachado</b>: el humo y el calor suben; el aire respirable está cerca del suelo.</li>
+      <li><b>Cubre tu boca y nariz con un paño húmedo</b> para filtrar el humo.</li>
+      <li><b>No abras puertas calientes</b>: tócala con el dorso de la mano; si está caliente, busca otra salida.</li>
+    </ul>
+  </div>
+  <div class="bloque despues"><h3>🟠 Después</h3>
+    <ul>
+      <li><b>Llama a bomberos (116)</b> desde un lugar seguro y da la dirección exacta.</li>
+      <li><b>No reingreses</b> bajo ninguna circunstancia; deja el rescate a los profesionales.</li>
+    </ul>
+  </div>
+  <div class="bloque reco"><h3>⚠️ Recomendaciones</h3>
+    <ul><li>Ten a la mano: <b>encendedor o fósforos, linterna, toallas húmedas y un cambio de ropa</b> en tu mochila de emergencia.</li></ul>
+  </div>
+</div>
+
+<!-- 9. RACIONAMIENTO -->
+<div class="seccion">
+  <div class="encabezado gris"><span class="num">9</span><span class="ico">🍞</span><h2>Cómo racionar alimentos si quedas sepultado (6 días)</h2></div>
+  <table>
+    <tr><th>Edición</th><th>Personas</th><th>Ración diaria aproximada</th></tr>
+    <tr><td>1 persona</td><td>1</td><td>1 botella de agua + 1 comida ligera/día</td></tr>
+    <tr><td>Pareja</td><td>2</td><td>Compartir 1.5 L de agua + 1 lata/día</td></tr>
+    <tr><td>Familia pequeña</td><td>4</td><td>1 L de agua por persona + 2 latas compartidas</td></tr>
+    <tr><td>Familia grande</td><td>8</td><td>Raciones muy pequeñas, priorizar niños</td></tr>
+    <tr><td>Mascotas (1–2)</td><td>+ peludo</td><td>1 tazón pequeño de alimento/día</td></tr>
+  </table>
+  <div class="peligro">💧 <b>Agua primero:</b> el cuerpo aguanta semanas sin comida, pero solo días sin agua.</div>
+  <div class="bloque reco"><h3>⚠️ Recomendaciones clave</h3>
+    <ul>
+      <li><b>Raciona desde el día 1</b>, no esperes a que falte.</li>
+      <li>Come en <b>porciones mínimas</b>: una cucharada cada varias horas mantiene la energía sin agotar los suministros.</li>
+      <li><b>Prioriza a niños y mascotas</b>; los adultos aguantan más.</li>
+      <li>Usa el <b>silbato en intervalos</b> para ahorrar energía al pedir ayuda.</li>
+    </ul>
+  </div>
+</div>
+
+<!-- 10. CIERRE -->
+<div class="seccion">
+  <div class="encabezado rojo"><span class="num">10</span><span class="ico">☎️</span><h2>Cierre / Contactos de emergencia</h2></div>
+  <div class="contactos">
+    <div class="tarjeta"><div class="nombre">🚒 Bomberos</div><div class="numero">116</div></div>
+    <div class="tarjeta"><div class="nombre">👮 Policía</div><div class="numero">105</div></div>
+    <div class="tarjeta"><div class="nombre">🚑 Salud (SAMU)</div><div class="numero">106</div></div>
+    <div class="tarjeta"><div class="nombre">⛑️ Cruz Roja</div><div class="numero">01 266 0489</div></div>
+  </div>
+  <div class="bloque reco"><h3>📞 Números de familiares</h3>
+    <ul>
+      <li>Mamá: ______________________________</li>
+      <li>Papá: ______________________________</li>
+      <li>Familiar cercano: ______________________________</li>
+      <li>Vecino de confianza: ______________________________</li>
+    </ul>
+  </div>
+  <div class="nota">✅ <b>Plan familiar:</b> acuerden un punto de encuentro, memoricen los números de emergencia y practiquen un simulacro por año. <b>Prepararse hoy es sobrevivir mañana.</b></div>
+</div>
+
+</body>
+</html>
